@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UploadWithPhotoActivity">
+
+    <TextView
+        android:id="@+id/recipe_name_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Upload with Photo"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        />
+
+    <EditText
+        android:id="@+id/editText_recipeName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Recipe Name"
+        android:inputType="text"
+        android:textSize="18sp"
+        android:padding="16dp"/>
+
+    <Button
+        android:id="@+id/choose_image_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Select Photo"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/recipe_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="383dp"
+        android:layout_weight="1" />
+
+    <Switch
+        android:id="@+id/toggleButton_addToFavorites"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:text="Add to Favorites"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Save"
+        android:textSize="18sp" />
+
+
+</LinearLayout>

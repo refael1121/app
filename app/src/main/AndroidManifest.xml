@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.myapplicationrecipe">
+
+    <application
+        android:allowBackup="true"
+
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:enableOnBackInvokedCallback="true"
+        android:theme="@style/Theme.MyApplicationrecipe"
+        tools:targetApi="33">
+
+        <activity android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".RecipeActivityWithPhotoFavorite"/>
+        <activity android:name=".FavoriteRecipeActivity"/>
+        <activity android:name=".FavoriteRecipeWithPhotoActivity"/>
+
+        <activity android:name=".SearchWithoutPhotoActivity"/>
+        <activity android:name=".UploadRecipeActivity"/>
+        <activity android:name=".SearchRecipeActivity"/>
+        <activity android:name=".RecipeActivityWithPhoto"/>
+        <activity android:name=".RecipeActivityWithoutPhoto"/>
+        <activity android:name=".SearchWithPhotoActivity"/>
+        <activity android:name=".UploadWithPhotoActivity"/>
+        <activity android:name=".UploadWithoutPhotoActivity"/>
+        <activity android:name=".FavoriteRecipeWithoutPhotoActivity"/>
+        <activity android:name=".RecipeActivityWithoutPhotoFavorite"/>
+
+    </application>
+
+</manifest>
