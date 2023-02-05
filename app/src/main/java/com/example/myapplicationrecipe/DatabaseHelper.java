@@ -95,7 +95,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             } while (cursor.moveToNext());
         }
         cursor.close();
-
+        System.out.println("hello");
         return favoriteRecipesWithoutPhoto;
     }
 
