@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnUpload, btnSearch, btnFavorites;
+    Button btnUpload, btnSearch, btnFavorites, btnSearchIngred;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnUpload = findViewById(R.id.btn_upload);
         btnSearch = findViewById(R.id.btn_search);
+        btnSearchIngred = findViewById(R.id.btn_searchIngred);
         btnFavorites = findViewById(R.id.btn_favorites);
 
         btnUpload.setOnClickListener(new View.OnClickListener() {
@@ -37,6 +38,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnSearchIngred.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent searchingred = new Intent(MainActivity.this, SearchByIngredients.class);
+                startActivity(searchingred);
+            }
+        });
         btnFavorites.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

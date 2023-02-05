@@ -39,6 +39,7 @@
         <activity android:name=".UploadWithoutPhotoActivity"/>
         <activity android:name=".FavoriteRecipeWithoutPhotoActivity"/>
         <activity android:name=".RecipeActivityWithoutPhotoFavorite"/>
+        <activity android:name=".SearchByIngredients"/>
 
     </application>
 
