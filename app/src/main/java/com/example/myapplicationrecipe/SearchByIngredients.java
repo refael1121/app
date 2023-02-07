@@ -58,15 +58,14 @@ public class SearchByIngredients extends AppCompatActivity {
     private List<Recipe> searchRecipes(String ingredients) {
         List<Recipe> matchingRecipes = new ArrayList<>();
         String[] ingredientList = ingredients.split(",");
+        String combinedIngredients = "";
+
+        for (String ingredient : ingredientList) {
+            combinedIngredients += ingredient.trim() + " ";
+        }
 
         for (Recipe recipe : db.getAllRecipes()) {
-            int ingredientCount = 0;
-            for (String ingredient : ingredientList) {
-                if (recipe.getIngredients().contains(ingredient.trim())) {
-                    ingredientCount++;
-                }
-            }
-            if (ingredientCount == ingredientList.length) {
+            if (combinedIngredients.contains(recipe.getIngredients())) {
                 matchingRecipes.add(recipe);
             }
         }

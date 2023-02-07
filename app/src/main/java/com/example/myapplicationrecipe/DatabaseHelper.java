@@ -80,7 +80,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public List<Recipe> getAllFavoriteRecipesWithoutPhoto() {
         List<Recipe> favoriteRecipesWithoutPhoto = new ArrayList<>();
-        String SELECT_QUERY = "SELECT * FROM " + TABLE_NAME + " WHERE " +FAVORITE + " = 0 AND " + PHOTO + " IS NULL";
+        String SELECT_QUERY = "SELECT * FROM " + TABLE_NAME + " WHERE " +FAVORITE + " = 1 AND " + PHOTO + " IS NULL";
 
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(SELECT_QUERY, null);
@@ -101,6 +101,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     // Adding new recipe with name and photo
     public boolean addRecipeWithPhoto(String name, byte[] photo,Boolean favorite) {
+
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(NAME, name);
@@ -132,7 +133,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 // Get all recipes
 public List<Recipe> getAllRecipes() {
     List<Recipe> recipeList = new ArrayList<>();
-    String selectQuery = "SELECT * FROM " + TABLE_NAME;
+    String selectQuery = "SELECT * FROM " + TABLE_NAME + " WHERE "  + PHOTO + " IS NULL";
     SQLiteDatabase db = this.getWritableDatabase();
     Cursor cursor = db.rawQuery(selectQuery, null);
 
@@ -154,7 +155,7 @@ public List<Recipe> getAllRecipes() {
 }
     public List<Recipe> getAllRecipesWithPhoto() {
         List<Recipe> recipeList = new ArrayList<>();
-        String selectQuery = "SELECT * FROM " + TABLE_NAME;
+        String selectQuery = "SELECT * FROM " + TABLE_NAME + " WHERE "  + PHOTO + " IS NOT NULL";
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
 
@@ -172,17 +173,4 @@ public List<Recipe> getAllRecipes() {
         return recipeList;
     }
 
-// Update recipe
-public int updateRecipe(Recipe recipe) {
-        SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues values = new ContentValues();
-        values.put(NAME, recipe.getName());
-        values.put(INGREDIENTS, recipe.getIngredients());
-        values.put(INSTRUCTIONS, recipe.getInstructions());
-        values.put(PHOTO,recipe.getPhoto());
-
-    int result = db.update(TABLE_NAME, values, ID + " = ?", new String[]{String.valueOf(recipe.getId())});
-    db.close();
-    return result;
-}
 }

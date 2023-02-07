@@ -10,7 +10,7 @@
         android:id="@+id/editTextingredients"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter ingredients separated by commas" />
+        android:hint="Enter ingredients separated by commas and in alphabetical order" />
 
     <Button
         android:id="@+id/buttoningredients"

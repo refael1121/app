@@ -1,9 +1,7 @@
 package com.example.myapplicationrecipe;
 
 import android.content.Intent;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;

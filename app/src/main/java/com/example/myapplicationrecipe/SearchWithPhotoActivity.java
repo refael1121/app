@@ -8,7 +8,6 @@ import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.gson.Gson;
 
 import java.util.List;
 

@@ -7,11 +7,6 @@ public class Recipe {
     private String instructions;
     private Boolean favorite;
 
-    public Recipe(String name,  byte[] photo,boolean favorite) {
-        this.name = name;
-        this.photo = photo;
-        this.favorite=favorite;
-    }
     public Recipe() {
         this.id = -1;
         this.name = "";
@@ -22,12 +17,7 @@ public class Recipe {
 
     private byte[] photo;
 
-    public Recipe(String name, String ingredients, String instructions,Boolean favorite) {
-        this.name = name;
-        this.ingredients = ingredients;
-        this.instructions = instructions;
-        this.favorite=favorite;
-    }
+
 
     public int getId() {
         return id;

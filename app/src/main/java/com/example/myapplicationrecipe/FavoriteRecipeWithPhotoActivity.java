@@ -7,13 +7,8 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.DefaultItemAnimator;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.gson.Gson;
 
-import java.io.Console;
 import java.util.ArrayList;
 import java.util.List;
 
